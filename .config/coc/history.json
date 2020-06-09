@@ -1,0 +1,38 @@
+{
+  "commands": {
+    "%2Fmnt%2Fc%2Flaragon%2Fwww%2Fjoshua-afk-v2": [
+      "pyhon",
+      "python"
+    ],
+    "%2Fmnt%2Fc%2Flaragon%2Fwww%2F_python%2Fpollster_project": [
+      "python"
+    ],
+    "%2Fmnt%2Fc%2Flaragon%2Fwww%2F_python%2Fpollster_project%2Fpollster": [
+      "python"
+    ]
+  },
+  "extensions": {
+    "%2Fmnt%2Fc%2Flaragon%2Fwww%2Fjoshua-afk-v2": [
+      "eee"
+    ]
+  },
+  "explorerActions": {
+    "%2Fmnt%2Fc%2Flaragon%2Fwww%2Fjoshua-afk-v2": [
+      "addfile",
+      "deletefil",
+      "delete",
+      "cd"
+    ],
+    "%2Fmnt%2Fc%2Flaragon%2Fwww%2F_python%2Fpollster_project": [
+      "cd"
+    ],
+    "%2Fmnt%2Fc%2Flaragon%2Fwww": [
+      "cd"
+    ]
+  },
+  "diagnostics": {
+    "%2Fmnt%2Fc%2Flaragon%2Fwww%2Fjoshua-afk-v2": [
+      "aaaaaaaaaaaaaaaaaaa"
+    ]
+  }
+}
