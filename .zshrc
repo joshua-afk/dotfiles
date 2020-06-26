@@ -72,6 +72,7 @@ plugins=(git zsh-autosuggestions)
 
 # Set ZSH_DISABLE_COMPFIX=true
 source $ZSH/oh-my-zsh.sh
+ZSH_THEME=""
 
 # User configuration
 
