@@ -100,6 +100,9 @@ ZSH_THEME=""
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# remove zcompdump file (cache)
+rm ~/.zcompdump
+
 # change dir on start
 cd /mnt/z
 
@@ -107,3 +110,4 @@ cd /mnt/z
 fpath+=$HOME/.zsh/pure
 autoload -U promptinit; promptinit
 prompt pure
+
