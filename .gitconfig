@@ -1,3 +1,5 @@
 [user]
 	email = joshuaryan.velasquez.0322@gmail.com
 	name = Joshua Ryan V. Velasquez
+[core]
+	editor = nvim
