@@ -3,3 +3,7 @@
 	name = Joshua Ryan V. Velasquez
 [core]
 	editor = nvim
+[alias]
+    stat = status
+    st = status
+    co = checkout
