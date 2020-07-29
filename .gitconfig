@@ -1,6 +1,8 @@
 [user]
 	email = joshuaryan.velasquez.0322@gmail.com
 	name = Joshua Ryan V. Velasquez
+[github]
+    user = joshua-afk
 [core]
 	editor = nvim
 [alias]
@@ -18,3 +20,5 @@
     diff = auto
     interactive = auto
     status = auto
+[credential]
+	helper = cache --timeout=3600
