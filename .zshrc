@@ -109,6 +109,10 @@ alias zshconfig="nvim ~/.zshrc"
 alias ohmyzsh="nvim ~/.oh-my-zsh"
 alias gitconfig="nvim ~/.gitconfig"
 
+alias quit="exit"
+alias :q="exit"
+alias :q!="exit"
+
 # remove zcompdump file (cache)
 rm ~/.zcompdump
 
