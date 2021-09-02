@@ -2,7 +2,7 @@
 .bash_logout
 .cache
 .config
-.config/configstore/*
+.config/*
 .landscape
 .npm
 .selected_editor
