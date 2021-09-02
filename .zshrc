@@ -3,14 +3,14 @@
 path+=('/bin')
 path+=('/usr/bin')
 path+=('/usr/local/bin')
-path+=('/home/joshua-afk')
-path+=('/home/joshua-afk/.local')
-path+=('/home/joshua-afk/.local/bin')
+path+=('/home/kazuyuki')
+path+=('/home/kazuyuki/.local')
+path+=('/home/kazuyuki/.local/bin')
 
 export PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/joshua-afk/.oh-my-zsh"
+export ZSH="/home/kazuyuki/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -116,11 +116,9 @@ alias :q!="exit"
 # remove zcompdump file (cache)
 rm ~/.zcompdump
 
-# change dir on start
-cd /mnt/z
-
 # pure-theme
-fpath+=$HOME/.zsh/pure
-autoload -U promptinit; promptinit
-prompt pure
+# fpath+=$HOME/.zsh/pure
+# autoload -U promptinit; promptinit
+# prompt pure
+
 
