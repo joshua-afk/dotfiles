@@ -1,6 +1,8 @@
 .bash_history
 .bash_logout
 .cache
+.config
+.config/configstore/*
 .landscape
 .npm
 .selected_editor
