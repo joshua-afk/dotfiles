@@ -11,6 +11,7 @@
     ci = commit
     p = push
     st = status
+    cm = commit -m
     co = checkout
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
