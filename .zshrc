@@ -23,10 +23,11 @@ alias la="ls -a"
 alias grep="grep -n --color"
 alias update="sudo apt-get update"
 alias install="sudo apt install"
-alias win="cd /mnt/c"
-alias user="cd /mnt/c/users/kazuyuki"
-alias sbruby="cd /mnt/c/sandbox-ruby"
 alias zshrc="vim ~/.zshrc"
+alias home="cd ~"
+alias win="cd /mnt/c"
+alias sbruby="cd /mnt/c/sandbox-ruby"
+alias user="cd /mnt/c/users/kazuyuki"
 
 # PLUGINS
 plugins=( 
