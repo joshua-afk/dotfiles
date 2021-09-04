@@ -43,12 +43,14 @@ fpath+=($HOME/.zsh-completions/src $fpath)
 [[ -s /home/kazuyuki/.autojump/etc/profile.d/autojump.sh ]] && source /home/kazuyuki/.autojump/etc/profile.d/autojump.sh
 autoload -U compinit && compinit -u
 
+fpath+=('/usr/local/lib/node_modules/pure-prompt/functions')
+
 # THEME
-ZSH_THEME="spaceship"
+ZSH_THEME="pure"
 
 # Set Spaceship ZSH as a prompt
 autoload -U promptinit; promptinit
-prompt spaceship
+prompt pure
 
 zstyle :compinstall filename '/home/kazuyuki/.zshrc'
 
