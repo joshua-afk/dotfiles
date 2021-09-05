@@ -48,10 +48,24 @@ fpath+=('/usr/local/lib/node_modules/pure-prompt/functions')
 # THEME
 ZSH_THEME="pure"
 
-# Set Spaceship ZSH as a prompt
+# Set PURE ZSH as a prompt
 autoload -U promptinit; promptinit
 prompt pure
 
 zstyle :compinstall filename '/home/kazuyuki/.zshrc'
 
+# Share yank or vim and tmux to system clipboard
+yanktoclipboard(){
+  echo $BUFFER | xsel -i -b
+}
+
+pastefromclipboard(){
+  RBUFFER=$(xsel -o -b </dev/null)$RBUFFER
+}
+zle -N yanktoclipboard
+zle -N pastefromclipboard
+bindkey -a 'yy' yanktoclipboard
+bindkey -a 'p' pastefromclipboard
+
+# Source fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
