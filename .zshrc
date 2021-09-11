@@ -21,13 +21,15 @@ alias reload="source ~/.zshrc"
 alias ll="ls -l"
 alias la="ls -a"
 alias grep="grep -n --color"
-alias update="sudo apt-get update"
+alias update="sudo apt update"
 alias install="sudo apt install"
 alias zshrc="vim ~/.zshrc"
 alias home="cd ~"
 alias win="cd /mnt/c"
 alias sbruby="cd /mnt/c/sandbox-ruby"
 alias user="cd /mnt/c/users/kazuyuki"
+alias cdc="cd /mnt/c/"
+alias nvim-test="python $HOME/clones/vim-plugins-profile/vim-plugins-profile.py nvim"
 
 # PLUGINS
 plugins=( 
