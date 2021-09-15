@@ -20,6 +20,8 @@ export PATH
 alias reload="source ~/.zshrc"
 alias ll="ls -l"
 alias la="ls -a"
+alias lla="ll -a"
+alias :q="exit"
 alias grep="grep -n --color"
 alias update="sudo apt update"
 alias install="sudo apt install"
