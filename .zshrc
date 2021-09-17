@@ -26,12 +26,19 @@ alias grep="grep -n --color"
 alias update="sudo apt update"
 alias install="sudo apt install"
 alias zshrc="vim ~/.zshrc"
+alias nvim-test="python $HOME/clones/vim-plugins-profile/vim-plugins-profile.py nvim"
+
+# Directory Alias
 alias home="cd ~"
-alias win="cd /mnt/c"
+alias cdc="cd /mnt/c/"
 alias sbruby="cd /mnt/c/sandbox-ruby"
 alias user="cd /mnt/c/users/kazuyuki"
-alias cdc="cd /mnt/c/"
-alias nvim-test="python $HOME/clones/vim-plugins-profile/vim-plugins-profile.py nvim"
+alias laragon="cd /mnt/c/laragon"
+alias www="cd /mnt/c/laragon/www"
+
+# Laravel Alias
+alias art="php artisan"
+alias tinker="php artisan tinker"
 
 # PLUGINS
 plugins=( 
