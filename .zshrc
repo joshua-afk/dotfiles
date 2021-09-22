@@ -18,9 +18,10 @@ export PATH
 
 # ALIASES
 alias reload="source ~/.zshrc"
-alias ll="ls -l"
-alias la="ls -a"
-alias lla="ll -a"
+alias ls="ls --color=auto"
+alias ll="ls -l --color=auto"
+alias la="ls -a --color=auto"
+alias lla="ll -a --color=auto"
 alias :q="exit"
 alias grep="grep -n --color"
 alias update="sudo apt update"
