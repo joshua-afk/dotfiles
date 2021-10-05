@@ -27,8 +27,11 @@ alias grep="grep -n --color"
 alias update="sudo apt update"
 alias upgrade="sudo apt upgrade"
 alias install="sudo apt install"
-alias zshrc="vim ~/.zshrc"
+alias zshrc="nvim ~/.zshrc"
+alias wezterm="nvim /mnt/c/users/kazuyuki/.wezterm.lua"
 alias nvim-test="python $HOME/clones/vim-plugins-profile/vim-plugins-profile.py nvim"
+alias todo="todo.sh"
+alias t="todo.sh"
 
 # Directory Alias
 alias home="cd ~"
@@ -47,6 +50,8 @@ plugins=(
 	# other plugins...
 	zsh-autosuggestions
 )
+
+export FZF_DEFAULT_COMMAND='ag --nocolor --ignore node_modules -g ""'
 
 # SOURCE
 source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
