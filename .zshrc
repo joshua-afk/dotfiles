@@ -1,4 +1,12 @@
 # Created by newuser for 5.8
+
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # PATH
 path+=('/bin')
 path+=('/usr/bin')
@@ -11,7 +19,10 @@ path+=('/home/kazuyuki')
 path+=('/home/kazuyuki/.local')
 path+=('/home/kazuyuki/.local/bin')
 path+=('/home/kazuyuki/.autojump/bin')
+path+=('/home/kazuyuki/.npm-global/bin')
 path+=('/home/kazuyuki/clones/fzf/bin')
+path+=('/home/kazuyuki/clones/pure')
+path+=('/home/kazuyuki/clones/powerlevel10k')
 path+=('/sbin')
 
 export PATH
@@ -55,20 +66,22 @@ export FZF_DEFAULT_COMMAND='ag --nocolor --ignore node_modules -g ""'
 
 # SOURCE
 source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-fpath+=($HOME/.zsh-completions/src $fpath)
+source ~/clones/powerlevel10k/powerlevel10k.zsh-theme
 
-## PLUGINS-CONFIG
+fpath+=($HOME/.zsh-completions/src $fpath)
+fpath+=($HOME/clones/pure)
+fpath+=($HOME/clones/powerlevel10k/powerlevel10k.zsh-theme)
+
+# PLUGINS-CONFIG
 [[ -s /home/kazuyuki/.autojump/etc/profile.d/autojump.sh ]] && source /home/kazuyuki/.autojump/etc/profile.d/autojump.sh
 autoload -U compinit && compinit -u
 
-fpath+=('/usr/local/lib/node_modules/pure-prompt/functions')
-
 # THEME
-ZSH_THEME="pure"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set PURE ZSH as a prompt
-autoload -U promptinit; promptinit
-prompt pure
+# autoload -U promptinit; promptinit
+# prompt pure
 
 zstyle :compinstall filename '/home/kazuyuki/.zshrc'
 
@@ -87,3 +100,6 @@ bindkey -a 'p' pastefromclipboard
 
 # Source fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
