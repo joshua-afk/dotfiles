@@ -6,8 +6,8 @@
 [core]
 	editor = nvim
 [alias]
-    fuckhard = reset --hard
-    fucksoft = reset --soft
+    fuckit = reset --hard
+    dontfuck = reset --soft
     ci = commit
     p = push
     st = status
