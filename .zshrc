@@ -53,7 +53,7 @@ alias laragon="cd /mnt/c/laragon"
 alias www="cd /mnt/c/laragon/www"
 
 # Laravel Alias
-alias art="php artisan"
+alias pa="php artisan"
 alias tinker="php artisan tinker"
 
 # React Alias
