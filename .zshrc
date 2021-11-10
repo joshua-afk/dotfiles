@@ -56,6 +56,9 @@ alias www="cd /mnt/c/laragon/www"
 alias art="php artisan"
 alias tinker="php artisan tinker"
 
+# React Alias
+alias react-create="npx create-react-app"
+
 # PLUGINS
 plugins=( 
 	# other plugins...
