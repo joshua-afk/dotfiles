@@ -1,5 +1,3 @@
-# Created by newuser for 5.8
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -15,17 +13,17 @@ path+=('/usr/games')
 path+=('/usr/sbin')
 path+=('/usr/local/sbin')
 path+=('/usr/local/games')
-path+=('/home/kazuyuki')
-path+=('/home/kazuyuki/.local')
-path+=('/home/kazuyuki/.local/bin')
-path+=('/home/kazuyuki/.autojump/bin')
-path+=('/home/kazuyuki/.npm-global/bin')
-path+=('/home/kazuyuki/clones/fzf/bin')
-path+=('/home/kazuyuki/clones/pure')
-path+=('/home/kazuyuki/clones/powerlevel10k')
+path+=('/home/jr')
+path+=('/home/jr/.local')
+path+=('/home/jr/.local/bin')
+path+=('/home/jr/.autojump/bin')
+path+=('/home/jr/.npm-global/bin')
+path+=('/home/jr/.fzf/bin')
+path+=('/home/jr/clones/powerlevel10k')
 path+=('/sbin')
-
-export PATH
+path+=('/home/jr/.rbenv/bin')
+path+=('/home/js/.rbenv/plugins/ruby-build/bin')
+eval "$(rbenv init -)"
 
 # ALIASES
 alias reload="source ~/.zshrc"
@@ -38,55 +36,41 @@ alias grep="grep -n --color"
 alias update="sudo apt update"
 alias upgrade="sudo apt upgrade"
 alias install="sudo apt install"
+alias nvimv="nvim ~/.config/nvim/init.vim"
 alias zshrc="nvim ~/.zshrc"
-alias wezterm="nvim /mnt/c/users/kazuyuki/.wezterm.lua"
+alias gitconfig="nvim ~/.gitconfig"
+alias wezterm="nvim /mnt/c/users/jr.velasquez/.config/wezterm/wezterm.lua"
 alias nvim-test="python $HOME/clones/vim-plugins-profile/vim-plugins-profile.py nvim"
-alias todo="todo.sh"
-alias t="todo.sh"
+
+alias rmgitlock="rm -f .git/index.lock"
 
 # Directory Alias
 alias home="cd ~"
 alias cdc="cd /mnt/c/"
-alias sbruby="cd /mnt/c/sandbox-ruby"
-alias user="cd /mnt/c/users/kazuyuki"
-alias laragon="cd /mnt/c/laragon"
-alias www="cd /mnt/c/laragon/www"
+alias cdd="cd /mnt/d/"
+alias user="cd /mnt/c/users/jr.velasquez"
 
 # Laravel Alias
 alias pa="php artisan"
 alias tinker="php artisan tinker"
 
-# React Alias
-alias react-create="npx create-react-app"
-
 # PLUGINS
 plugins=( 
-	# other plugins...
 	zsh-autosuggestions
 )
 
-export FZF_DEFAULT_COMMAND='ag --nocolor --ignore node_modules -g ""'
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+# export FZF_DEFAULT_COMMAND='ag --nocolor --ignore node_modules -g ""'
 
 # SOURCE
 source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/clones/powerlevel10k/powerlevel10k.zsh-theme
 
-fpath+=($HOME/.zsh-completions/src $fpath)
-fpath+=($HOME/clones/pure)
-fpath+=($HOME/clones/powerlevel10k/powerlevel10k.zsh-theme)
-
 # PLUGINS-CONFIG
-[[ -s /home/kazuyuki/.autojump/etc/profile.d/autojump.sh ]] && source /home/kazuyuki/.autojump/etc/profile.d/autojump.sh
+[[ -s /home/jr/.autojump/etc/profile.d/autojump.sh ]] && source /home/jr/.autojump/etc/profile.d/autojump.sh
 autoload -U compinit && compinit -u
 
-# THEME
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
-# Set PURE ZSH as a prompt
-# autoload -U promptinit; promptinit
-# prompt pure
-
-zstyle :compinstall filename '/home/kazuyuki/.zshrc'
+zstyle :compinstall filename '/home/jr/.zshrc'
 
 # Share yank or vim and tmux to system clipboard
 yanktoclipboard(){
