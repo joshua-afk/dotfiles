@@ -4,8 +4,6 @@
 .bundle
 .cache
 .composer
-.config
-.config/*
 .fzf.bash
 .fzf.zsh
 .gem
