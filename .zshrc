@@ -24,7 +24,6 @@ path+=("$HOME/clones/fzf/bin")
 path+=("$HOME/clones/pure")
 path+=("$HOME/clones/powerlevel10k")
 path+=("/sbin")
-
 export PATH
 
 # ALIASES
@@ -44,7 +43,7 @@ alias nvim-test="python $HOME/clones/vim-plugins-profile/vim-plugins-profile.py 
 alias todo="todo.sh"
 alias t="todo.sh"
 
-# Directory Alias
+# DIRECTORY ALIAS
 alias home="cd ~"
 alias cdc="cd /mnt/c/"
 alias sbruby="cd /mnt/c/sandbox-ruby"
@@ -52,11 +51,11 @@ alias user="cd /mnt/c/users/kazuyuki"
 alias laragon="cd /mnt/c/laragon"
 alias www="cd /mnt/c/laragon/www"
 
-# Laravel Alias
+# LARAVEL ALIAS
 alias pa="php artisan"
 alias tinker="php artisan tinker"
 
-# React Alias
+# REACT ALIAS
 alias react-create="npx create-react-app"
 
 # PLUGINS
@@ -64,12 +63,14 @@ plugins=(
 	zsh-autosuggestions
 )
 
+# EXPORTS
 export FZF_DEFAULT_COMMAND='ag --nocolor --ignore node_modules -g ""'
 
 # SOURCE
 source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/clones/powerlevel10k/powerlevel10k.zsh-theme
 
+# AUTOLOAD
 fpath+=($HOME/.zsh-completions/src $fpath)
 fpath+=($HOME/clones/pure)
 fpath+=($HOME/clones/powerlevel10k/powerlevel10k.zsh-theme)
@@ -80,14 +81,12 @@ autoload -U compinit && compinit -u
 
 # THEME
 ZSH_THEME="powerlevel10k/powerlevel10k"
-
 zstyle :compinstall filename "$HOME/.zshrc"
 
-# Share yank or vim and tmux to system clipboard
+# SHARE YANK FOR VIM AND TMUX TO SYSTEM (WINDOWS) CLIPBOARD
 yanktoclipboard(){
   echo $BUFFER | xsel -i -b
 }
-
 pastefromclipboard(){
   RBUFFER=$(xsel -o -b </dev/null)$RBUFFER
 }
