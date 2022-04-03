@@ -7,6 +7,10 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+# DECLARE NEW PATHS
+WINHOME=$(wslpath "$(wslvar USERPROFILE)")
+CDRIVE="/mnt/c"
+
 # PATH
 path+=("/bin")
 path+=("/usr/bin")
@@ -38,18 +42,18 @@ alias update="sudo apt update"
 alias upgrade="sudo apt upgrade"
 alias install="sudo apt install"
 alias zshrc="nvim ~/.zshrc"
-alias wezterm="nvim /mnt/c/users/kazuyuki/.wezterm.lua"
+alias wezterm="nvim $WINHOME/.wezterm.lua"
 alias nvim-test="python $HOME/clones/vim-plugins-profile/vim-plugins-profile.py nvim"
 alias todo="todo.sh"
 alias t="todo.sh"
 
 # DIRECTORY ALIAS
 alias home="cd ~"
-alias cdc="cd /mnt/c/"
-alias sbruby="cd /mnt/c/sandbox-ruby"
-alias user="cd /mnt/c/users/kazuyuki"
-alias laragon="cd /mnt/c/laragon"
-alias www="cd /mnt/c/laragon/www"
+alias cdc="cd $CDRIVE"
+alias sbruby="cd $CDRIVE/sandbox-ruby"
+alias user="cd $WINHOME"
+alias laragon="cd $CDRIVE/laragon"
+alias www="cd $CDRIVE/laragon/www"
 
 # LARAVEL ALIAS
 alias pa="php artisan"
