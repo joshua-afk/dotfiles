@@ -1,5 +1,3 @@
-# Created by newuser for 5.8
-
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -41,11 +39,12 @@ alias grep="grep -n --color"
 alias update="sudo apt update"
 alias upgrade="sudo apt upgrade"
 alias install="sudo apt install"
+alias nvimv="nvim ~/.config/nvim/init.vim"
 alias zshrc="nvim ~/.zshrc"
 alias wezterm="nvim $WINHOME/.wezterm.lua"
+alias gitconfig="nvim ~/.gitconfig"
 alias nvim-test="python $HOME/clones/vim-plugins-profile/vim-plugins-profile.py nvim"
-alias todo="todo.sh"
-alias t="todo.sh"
+alias rmgitlock="rm -f .git/index.lock"
 
 # DIRECTORY ALIAS
 alias home="cd ~"
@@ -68,7 +67,8 @@ plugins=(
 )
 
 # EXPORTS
-export FZF_DEFAULT_COMMAND='ag --nocolor --ignore node_modules -g ""'
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git'
+# export FZF_DEFAULT_COMMAND='ag --nocolor --ignore node_modules -g ""'
 
 # SOURCE
 source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -78,6 +78,7 @@ source ~/clones/powerlevel10k/powerlevel10k.zsh-theme
 fpath+=($HOME/.zsh-completions/src $fpath)
 fpath+=($HOME/clones/pure)
 fpath+=($HOME/clones/powerlevel10k/powerlevel10k.zsh-theme)
+eval "$(rbenv init -)"
 
 # PLUGINS-CONFIG
 [[ -s $HOME/.autojump/etc/profile.d/autojump.sh ]] && source $HOME/.autojump/etc/profile.d/autojump.sh
