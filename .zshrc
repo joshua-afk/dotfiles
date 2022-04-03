@@ -8,22 +8,22 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # PATH
-path+=('/bin')
-path+=('/usr/bin')
-path+=('/usr/local/bin')
-path+=('/usr/games')
-path+=('/usr/sbin')
-path+=('/usr/local/sbin')
-path+=('/usr/local/games')
-path+=('/home/kazuyuki')
-path+=('/home/kazuyuki/.local')
-path+=('/home/kazuyuki/.local/bin')
-path+=('/home/kazuyuki/.autojump/bin')
-path+=('/home/kazuyuki/.npm-global/bin')
-path+=('/home/kazuyuki/clones/fzf/bin')
-path+=('/home/kazuyuki/clones/pure')
-path+=('/home/kazuyuki/clones/powerlevel10k')
-path+=('/sbin')
+path+=("/bin")
+path+=("/usr/bin")
+path+=("/usr/local/bin")
+path+=("/usr/games")
+path+=("/usr/sbin")
+path+=("/usr/local/sbin")
+path+=("/usr/local/games")
+path+=("$HOME")
+path+=("$HOME/.local")
+path+=("$HOME/.autojump/bin")
+path+=("$HOME/.local/bin")
+path+=("$HOME/.npm-global/bin")
+path+=("$HOME/clones/fzf/bin")
+path+=("$HOME/clones/pure")
+path+=("$HOME/clones/powerlevel10k")
+path+=("/sbin")
 
 export PATH
 
@@ -61,7 +61,6 @@ alias react-create="npx create-react-app"
 
 # PLUGINS
 plugins=( 
-	# other plugins...
 	zsh-autosuggestions
 )
 
@@ -76,17 +75,13 @@ fpath+=($HOME/clones/pure)
 fpath+=($HOME/clones/powerlevel10k/powerlevel10k.zsh-theme)
 
 # PLUGINS-CONFIG
-[[ -s /home/kazuyuki/.autojump/etc/profile.d/autojump.sh ]] && source /home/kazuyuki/.autojump/etc/profile.d/autojump.sh
+[[ -s $HOME/.autojump/etc/profile.d/autojump.sh ]] && source $HOME/.autojump/etc/profile.d/autojump.sh
 autoload -U compinit && compinit -u
 
 # THEME
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# Set PURE ZSH as a prompt
-# autoload -U promptinit; promptinit
-# prompt pure
-
-zstyle :compinstall filename '/home/kazuyuki/.zshrc'
+zstyle :compinstall filename "$HOME/.zshrc"
 
 # Share yank or vim and tmux to system clipboard
 yanktoclipboard(){
