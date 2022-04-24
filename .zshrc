@@ -5,10 +5,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# DECLARE NEW PATHS
-WINHOME=$(wslpath "$(wslvar USERPROFILE)")
-CDRIVE="/mnt/c"
-
 # PATH
 path+=("/bin")
 path+=("/usr/bin")
