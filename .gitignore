@@ -4,8 +4,6 @@
 .bundle
 .cache
 .composer
-.fzf.bash
-.fzf.zsh
 .gem
 .histfile
 .landscape
