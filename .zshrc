@@ -39,6 +39,7 @@ alias nvimv="nvim ~/.config/nvim/init.vim"
 alias zshrc="nvim ~/.zshrc"
 alias wezterm="nvim $WINHOME/.config/wezterm/wezterm.lua"
 alias gitconfig="nvim ~/.gitconfig"
+alias autojumpdb="nvim /home/joshua-afk/.local/share/autojump/autojump.txt"
 alias nvim-test="python $HOME/clones/vim-plugins-profile/vim-plugins-profile.py nvim"
 alias rmgitlock="rm -f .git/index.lock"
 alias kill="tmux kill-server"
@@ -61,7 +62,8 @@ alias react-create="npx create-react-app"
 
 # PLUGINS
 plugins=( 
-	zsh-autosuggestions
+	zsh-autosuggestions,
+	history
 )
 
 # EXPORTS
