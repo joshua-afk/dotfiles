@@ -46,6 +46,7 @@ alias rmgitlock="rm -f .git/index.lock"
 alias kill="tmux kill-server"
 alias exp="explorer.exe ."
 alias py="python3"
+alias update-neovim='sudo rm /usr/local/bin/nvim ; sudo rm -r /usr/local/share/nvim/ ; sudo apt update -y && cd ~/clones/neovim && git checkout master && git pull https://github.com/neovim/neovim.git/ master && git branch -D nightly ; git checkout -b nightly && sudo rm -rf build && make CMAKE_BUILD_TYPE=RelWithDebInfo && make CMAKE_EXTRA_FLAGS="-DCMAKE_INSTALL_PREFIX=$HOME/neovim" && sudo make install && export PATH="$HOME/neovim/bin:$PATH" && git checkout master && git branch -D nightly && cd -'
 
 # DIRECTORY ALIAS
 alias home="cd ~"
