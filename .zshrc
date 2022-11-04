@@ -45,6 +45,7 @@ alias nvim-test="python $HOME/clones/vim-plugins-profile/vim-plugins-profile.py 
 alias rmgitlock="rm -f .git/index.lock"
 alias kill="tmux kill-server"
 alias exp="explorer.exe ."
+alias py="python3"
 
 # DIRECTORY ALIAS
 alias home="cd ~"
