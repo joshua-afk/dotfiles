@@ -105,6 +105,9 @@ zle -N pastefromclipboard
 bindkey -a 'yy' yanktoclipboard
 bindkey -a 'p' pastefromclipboard
 
+# Remap CTRL + W to CTRL + BACKSPACE
+bindkey '^H' backward-kill-word
+
 # Source fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
