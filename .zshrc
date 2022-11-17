@@ -51,6 +51,7 @@ alias update-neovim='sudo rm /usr/local/bin/nvim ; sudo rm -r /usr/local/share/n
 # DIRECTORY ALIAS
 alias home="cd ~"
 alias cdc="cd $CDRIVE"
+alias cdd="cd /mnt/d"
 alias sbruby="cd $CDRIVE/sandbox-ruby"
 alias user="cd $WINHOME"
 alias laragon="cd $CDRIVE/laragon"
