@@ -25,7 +25,7 @@ path+=("$HOME/clones/powerlevel10k")
 path+=("/sbin")
 export PATH
 
-# ALIASES
+# ALIAS: MISC
 alias reload="source ~/.zshrc"
 alias ls="ls --color=auto"
 alias ll="ls -l --color=auto"
@@ -36,21 +36,26 @@ alias grep="grep -n --color"
 alias update="sudo apt update"
 alias upgrade="sudo apt upgrade -y"
 alias install="sudo apt install -y"
-alias nvimv="nvim ~/.config/nvim/init.vim"
 alias zshrc="nvim ~/.zshrc"
 alias wezterm="nvim $WINHOME/.config/wezterm/wezterm.lua"
 alias alacritty="nvim $WINHOME/.config/alacritty/alacritty.yml"
 alias gitconfig="nvim ~/.gitconfig"
 alias autojumpdb="nvim /home/joshua-afk/.local/share/autojump/autojump.txt"
-alias nvim-test="python $HOME/clones/vim-plugins-profile/vim-plugins-profile.py nvim"
-alias rmgitlock="rm -f .git/index.lock"
 alias kill="tmux kill-server"
 alias exp="explorer.exe ."
 alias py="python3"
-alias update-neovim='sudo rm /usr/local/bin/nvim ; sudo rm -r /usr/local/share/nvim/ ; sudo apt update -y && cd ~/clones/neovim && git checkout master && git pull https://github.com/neovim/neovim.git/ master && git branch -D nightly ; git checkout -b nightly && sudo rm -rf build && make CMAKE_BUILD_TYPE=RelWithDebInfo && make CMAKE_EXTRA_FLAGS="-DCMAKE_INSTALL_PREFIX=$HOME/neovim" && sudo make install && export PATH="$HOME/neovim/bin:$PATH" && git checkout master && git branch -D nightly && cd -'
-alias vim=nvim
 
-# DIRECTORY ALIAS
+# ALIAS: GIT
+alias rmgitlock="rm -f .git/index.lock"
+
+# ALIAS: VIM & NVIM
+alias vim=nvim
+alias nvim-update='sudo rm /usr/local/bin/nvim ; sudo rm -r /usr/local/share/nvim/ ; sudo apt update -y && cd ~/clones/neovim && git checkout master && git pull https://github.com/neovim/neovim.git/ master && git branch -D nightly ; git checkout -b nightly && sudo rm -rf build && make CMAKE_BUILD_TYPE=RelWithDebInfo && make CMAKE_EXTRA_FLAGS="-DCMAKE_INSTALL_PREFIX=$HOME/neovim" && sudo make install && export PATH="$HOME/neovim/bin:$PATH" && git checkout master && git branch -D nightly && cd -'
+alias nvim-test="python $HOME/clones/vim-plugins-profile/vim-plugins-profile.py nvim"
+alias nvimv="nvim ~/.config/nvim/init.vim"
+alias diff='vim -c ":Gdiffsplit"'
+
+# ALIAS: DIRECTORY
 alias home="cd ~"
 alias cdc="cd $CDRIVE"
 alias cdd="cd /mnt/d"
@@ -59,11 +64,11 @@ alias user="cd $WINHOME"
 alias laragon="cd $CDRIVE/laragon"
 alias www="cd $CDRIVE/laragon/www"
 
-# LARAVEL ALIAS
+# ALIAS: LARAVEL
 alias pa="php artisan"
 alias tinker="php artisan tinker"
 
-# REACT ALIAS
+# ALIAS: REACT
 alias react-create="npx create-react-app"
 
 # PLUGINS
