@@ -6,8 +6,8 @@
 [core]
 	editor = nvim
 [alias]
-    fuckit = reset --hard
-    dontfuck = reset --soft
+    hard = reset --hard
+    soft = reset --soft
     ci = commit
     p = push
     st = status
@@ -18,6 +18,8 @@
     plog = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
     cfc = show --pretty --name-only
     unstage = reset HEAD --
+    del = branch -D
+    new = checkout -b
 [color]
     ui = true
     branch = auto
