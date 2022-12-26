@@ -50,16 +50,23 @@ alias rmgitlock="rm -f .git/index.lock"
 
 # ALIAS: VIM, NVIM, NEOVIDE
 alias vim=nvim
-alias nvim-update='sudo rm /usr/local/bin/nvim ; sudo rm -r /usr/local/share/nvim/ ; sudo apt update -y && cd ~/clones/neovim && git checkout master && git pull https://github.com/neovim/neovim.git/ master && git branch -D nightly ; git checkout -b nightly && sudo rm -rf build && make CMAKE_BUILD_TYPE=RelWithDebInfo && make CMAKE_EXTRA_FLAGS="-DCMAKE_INSTALL_PREFIX=$HOME/neovim" && sudo make install && export PATH="$HOME/neovim/bin:$PATH" && git checkout master && git branch -D nightly && cd -'
-alias nvim-test="python $HOME/clones/vim-plugins-profile/vim-plugins-profile.py nvim"
+alias update-nvim='sudo rm /usr/local/bin/nvim ; sudo rm -r /usr/local/share/nvim/ ; sudo apt update -y && cd ~/clones/neovim && git checkout master && git pull https://github.com/neovim/neovim.git/ master && git branch -D nightly ; git checkout -b nightly && sudo rm -rf build && make CMAKE_BUILD_TYPE=RelWithDebInfo && make CMAKE_EXTRA_FLAGS="-DCMAKE_INSTALL_PREFIX=$HOME/neovim" && sudo make install && export PATH="$HOME/neovim/bin:$PATH" && git checkout master && git branch -D nightly && cd -'
+alias test-nvim="python $HOME/clones/vim-plugins-profile/vim-plugins-profile.py nvim"
 alias nvimv="nvim ~/.config/nvim/init.vim"
 alias diff='vim -c ":Gdiffsplit"'
 alias nv='neovide.exe'
 
+# ALIAS: NGINX
+alias start-nginx="sudo service nginx start"
+alias stop-nginx="sudo service nginx stop"
+alias restart-nginx="sudo service nginx restart"
+alias nginxconf='sudo vim /etc/nginx/sites-enabled/default'
+
 # ALIAS: TOR
+alias restart-tor='sudo /etc/init.d/tor restart'
 alias torrc='sudo vim /etc/tor/torrc'
-alias get-onion='sudo cat /var/lib/tor/hidden_service/hostname'
-alias tor-start='sudo service nginx start; sudo tor'
+alias get-onion='sudo cat /var/lib/tor/onion-blog.com/hostname'
+alias nginx-project='cd /var/www/html'
 
 # ALIAS: DIRECTORY
 alias home="cd ~"
