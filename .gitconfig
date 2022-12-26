@@ -20,6 +20,7 @@
     unstage = reset HEAD --
     del = branch -D
     new = checkout -b
+    amend = commit --amend
 [color]
     ui = true
     branch = auto
@@ -28,3 +29,5 @@
     status = auto
 [credential]
 	helper = cache --timeout=3600
+[safe]
+	directory = /var/www/html
