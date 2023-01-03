@@ -65,7 +65,7 @@ alias nginxconf='sudo vim /etc/nginx/sites-enabled/default'
 # ALIAS: TOR
 alias restart-tor='sudo /etc/init.d/tor restart'
 alias torrc='sudo vim /etc/tor/torrc'
-alias get-onion='sudo cat /var/lib/tor/onion-blog.com/hostname'
+alias get-onion='sudo cat /var/lib/tor/hidden_service/hostname'
 alias nginx-project='cd /var/www/html'
 
 # ALIAS: DIRECTORY
