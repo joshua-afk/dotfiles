@@ -25,6 +25,18 @@ path+=("$HOME/clones/powerlevel10k")
 path+=("/sbin")
 export PATH
 
+function path_remove {
+  # Delete path by parts so we can never accidentally remove sub paths
+  PATH=${PATH//":$1:"/":"} # delete any instances in the middle
+  PATH=${PATH/#"$1:"/} # delete any instance at the beginning
+  PATH=${PATH/%":$1"/} # delete any instance in the at the end
+}
+
+path_remove '/mnt/c/Users/me/AppData/Roaming/npm'
+path_remove '/mnt/c/Program Files/Git'
+path_remove '/mnt/c/Program Files/Git/cmd'
+path_remove '/mnt/c/Program Files/nodejs'
+
 # ALIAS: MISC
 alias reload="source ~/.zshrc"
 alias ls="ls --color=auto"
