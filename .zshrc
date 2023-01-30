@@ -139,6 +139,10 @@ zle -N pastefromclipboard
 bindkey -a 'yy' yanktoclipboard
 bindkey -a 'p' pastefromclipboard
 
+# TAB Autocompletion case sensitive
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
+autoload -Uz compinit && compinit
+
 # Remap CTRL + W to CTRL + BACKSPACE
 bindkey '^H' backward-kill-word
 
