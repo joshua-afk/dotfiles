@@ -56,6 +56,7 @@ alias autojumpdb="nvim /home/joshua-afk/.local/share/autojump/autojump.txt"
 alias kill="tmux kill-server"
 alias exp="explorer.exe ."
 alias py="python3"
+alias ems="vim config/database.yml"
 
 # ALIAS: GIT
 alias rmgitlock="rm -f .git/index.lock"
