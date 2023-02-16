@@ -49,13 +49,15 @@ alias update="sudo apt update"
 alias upgrade="sudo apt upgrade -y"
 alias install="sudo apt install -y"
 alias zshrc="nvim ~/.zshrc"
+alias kill="tmux kill-server"
+alias exp="explorer.exe ."
+alias py="python3"
+
+# ALIAS: FILES
 alias wezterm="nvim $WINHOME/.config/wezterm/wezterm.lua"
 alias alacritty="nvim $WINHOME/.config/alacritty/alacritty.yml"
 alias gitconfig="nvim ~/.gitconfig"
 alias autojumpdb="nvim /home/joshua-afk/.local/share/autojump/autojump.txt"
-alias kill="tmux kill-server"
-alias exp="explorer.exe ."
-alias py="python3"
 alias ems="vim config/database.yml"
 
 # ALIAS: GIT
