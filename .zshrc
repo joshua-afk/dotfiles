@@ -22,6 +22,7 @@ path+=("$HOME/.deta/bin")
 path+=("$HOME/clones/fzf/bin")
 path+=("$HOME/clones/pure")
 path+=("$HOME/clones/powerlevel10k")
+path+=("$HOME/.rbenv/bin")
 path+=("/sbin")
 export PATH
 
@@ -120,7 +121,7 @@ source ~/clones/powerlevel10k/powerlevel10k.zsh-theme
 fpath+=($HOME/.zsh-completions/src $fpath)
 fpath+=($HOME/clones/pure)
 fpath+=($HOME/clones/powerlevel10k/powerlevel10k.zsh-theme)
-# eval "$(rbenv init -)"
+eval "$(rbenv init -)"
 
 # PLUGINS-CONFIG
 [[ -s $HOME/.autojump/etc/profile.d/autojump.sh ]] && source $HOME/.autojump/etc/profile.d/autojump.sh
