@@ -53,6 +53,7 @@ alias zshrc="nvim ~/.zshrc"
 alias kill="tmux kill-server"
 alias exp="explorer.exe ."
 alias py="python3"
+alias nv="neovide.exe"
 
 # ALIAS: FILES
 alias wezterm="nvim $WINHOME/.config/wezterm/wezterm.lua"
