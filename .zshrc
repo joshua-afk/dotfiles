@@ -60,17 +60,20 @@ alias wezterm="nvim $WINHOME/.config/wezterm/wezterm.lua"
 alias alacritty="nvim $WINHOME/.config/alacritty/alacritty.yml"
 alias gitconfig="nvim ~/.gitconfig"
 alias autojumpdb="nvim /home/joshua-afk/.local/share/autojump/autojump.txt"
-alias ems="vim config/database.yml"
+alias ems="nvim config/database.yml"
 
 # ALIAS: GIT
 alias rmgitlock="rm -f .git/index.lock"
+alias ga="git add"
+alias gs="git status"
+alias gl="git lol"
 
 # ALIAS: VIM, NVIM, NEOVIDE
 alias v=nvim
 alias update-nvim='sudo rm /usr/local/bin/nvim ; sudo rm -r /usr/local/share/nvim/ ; sudo apt update -y && cd ~/clones/neovim && git checkout master && git pull https://github.com/neovim/neovim.git/ master && git branch -D nightly ; git checkout -b nightly && sudo rm -rf build && make CMAKE_BUILD_TYPE=RelWithDebInfo && make CMAKE_EXTRA_FLAGS="-DCMAKE_INSTALL_PREFIX=$HOME/neovim" && sudo make install && export PATH="$HOME/neovim/bin:$PATH" && git checkout master && git branch -D nightly && cd -'
 alias test-nvim="python $HOME/clones/vim-plugins-profile/vim-plugins-profile.py nvim"
 alias nvimv="nvim ~/.config/nvim/init.vim"
-alias diff='vim -c ":Gdiffsplit"'
+alias diff='nvim -c ":Gdiffsplit"'
 alias nv='neovide.exe'
 
 # ALIAS: NGINX
