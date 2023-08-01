@@ -21,6 +21,7 @@
     del = branch -D
     new = checkout -b
     amend = commit --amend
+    discard = restore
 [color]
     ui = true
     branch = auto
